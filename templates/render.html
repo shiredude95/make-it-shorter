@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<body>
+
+
+<img id="shorter" src="{{ url_for('static', filename='shorter.png') }}"/>
+<p id="speech">
+
+
+    <b>
+
+
+        {% for sentences in render_payload["summaryLines"] %}
+
+            &#x25cf; {{ sentences }}<br>
+
+        {% endfor %}
+
+
+    </b>
+</p>
+
+
+<div class="data">
+
+
+    <p id="stats_tag">
+        <b>
+            <u>
+                Stats:
+            </u>
+        </b>
+    </p>
+
+    <p id="stats_data">
+
+
+        {% if "Error" in render_payload %}
+        <b>"Something went wrong! Selection too short to be summarized."</b>
+        {% else %}
+        <b>Top Terms:&nbsp;&nbsp;&nbsp;</b>
+        <b>
+
+
+            {% for topwords,occurance in render_payload["mostCommonWords"] %}
+
+                <i>&#x23;{{ topwords }}</i>
+
+            {% endfor %}
+
+
+            <br>
+            <br>
+
+            <b>Selection Shortened By:&nbsp;&nbsp;&nbsp;</b>
+            {{ render_payload["reducedBy"] }}&#37;
+            </b>
+
+            {% endif %}
+
+
+    </p>
+
+</div>
+</body>
+
+
+<style type="text/css">
+
+    @import 'https://fonts.googleapis.com/css?family=Arvo';
+    @import 'https://fonts.googleapis.com/css?family=Orbitron:700';
+
+    #stats_tag {
+        margin-top: 30%;
+        font-family: 'Orbitron', sans-serif;
+        color: #F50057;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #stats_data {
+        text-align: center;
+        font-family: 'Arvo', "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;;
+    <!-- font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    --> font-size: 20px;
+        color: #FF5722;
+    }
+
+    #shorter {
+        position: relative;
+        margin-top: 3.3%;
+        left: 30%;
+        z-index: 1;
+
+    }
+
+    p#speech {
+        position: absolute;
+        left: 25%;
+        top: 14.5%;
+        width: 50%;
+        height: 50%;
+        padding-top: 15px;
+        text-align: left;
+        padding-left: 5px;
+        line-height: 40px;
+        background-color: #fff;
+        border: 8px solid #000;
+        -webkit-border-radius: 30px;
+        -webkit-box-shadow: 6px 6px 6px #888;
+        overflow: scroll;
+        font-family: 'Arvo', "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;;
+        font-size: 16px;
+    }
+
+    ::-webkit-scrollbar {
+        z-index: -3;
+        position: absolute;
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        z-index: -3;
+        position: absolute;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        z-index: -3;
+        position: absolute;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+
+</style>
+
+
+</html>

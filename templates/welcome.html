@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+<div id="image-head">
+
+    <img id="shorter" src="{{ url_for('static', filename='shorter.png') }}"/><b><i>version. </i>0.1.2</b>
+
+</div>
+
+<p id="first_question">
+
+    What is Shorter.?
+
+</p>
+
+<p id="first_answer">
+
+    Shorter. is a chrome extension that allows you to select text from any web-page and returns a <i>shortened</i>
+    version of
+    it.
+
+</p>
+
+<p id="second_question">
+
+    What do you mean by shortened?
+
+</p>
+
+<p id="second_answer">
+
+    Shorter. takes your selected text, processes it and finds the most important parts of input that gives you an
+    overall idea
+    of the selection without having to read the entire selection.
+
+</p>
+
+
+<p id="third_question">
+
+    How do I use it?
+
+</p>
+
+<p id="third_answer">
+
+    Select the text you want (normally more than 2 lines) and right click to get the menu.Click
+    on Make It Shorter to view the summary.
+
+</p>
+
+<div id="images">
+    <img class="image-help" src="{{ url_for('static', filename='input.png') }}"/>
+    <img class="image-help" src="{{ url_for('static', filename='output.png') }}"/>
+</div>
+
+
+
+<p id="fourth_question">
+
+    How does this work?
+
+</p>
+
+<p id="fourth_answer">
+
+
+    Shorter. takes your selected text and ranks each sentence in the text according to its relevance in the selection.
+    It employs the TF-IDF principle to score each sentence with respect to words present in it and their importance in relation to the selection.
+    Using a two pass method to first find out the Top-N sentences in the first pass followed by finding out the highest scoring sentence
+    in every N-th bracket ensures the context as well as scores are factored in while summarizing.
+
+
+
+</p>
+
+<p id="dl_text">
+
+    Download:
+
+</p>
+
+<div id="download_link">
+
+
+    <a href="https://chrome.google.com/webstore/detail/shorter/icedmmjfgjobbdmomfcojnimjanoeakm">
+        <img id="web_store_logo" src="{{ url_for('static', filename='chrome_web_store_logo.png')}}" width="20%"
+             height="20%">
+    </a>
+
+</div>
+
+<p id="contact_info">
+    A <a href="https://github.com/shiredude95">
+    Vignesh Kumar
+</a>Production
+</p>
+
+
+</body>
+
+<style>
+
+
+    @import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700';
+    @import 'https://fonts.googleapis.com/css?family=Merriweather:700';
+
+
+    .image-help {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border:3px solid;
+    padding:8px;
+    }
+
+
+
+    #images{
+    text-align:center;
+    }
+
+
+
+
+    #image-head
+    {
+
+    margin:auto;
+
+    }
+
+    #first_question,#second_question,#third_question,#fourth_question
+    {
+
+    color:#FF5722;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:30px;
+    text-align:center;
+    margin-top:0%;
+
+    }
+
+    #first_answer,#second_answer,#third_answer,#fourth_answer
+    {
+
+    color:#000;
+    font-family: 'Merriweather', serif;
+    font-size:16px;
+    text-align:center;
+    line-height:20px;
+    margin-top:-10px;
+
+    }
+
+
+
+    #dl_text
+    {
+
+    color:#FF5722;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size:30px;
+    text-align:center;
+    }
+    #web_store_logo
+    {
+    display:block;
+    margin:auto;
+    margin-top:-2%;
+
+    }
+
+    #contact_info
+    {
+    margin-top:45px;
+    text-align:center;
+
+
+    }
+
+</style>
+
+</html>
