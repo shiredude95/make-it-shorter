@@ -14,7 +14,7 @@ def get_payload(request):
     lemma_flag = False
 
     raw = request.form['text']
-    small_summary_string = request.form['smallSummaryFlag']
+    small_summary_string = request.form['summarySize']
     lemma_flag_string = request.form['lemmaFlag']
 
     if small_summary_string == "true":
