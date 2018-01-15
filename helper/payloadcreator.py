@@ -1,4 +1,4 @@
-import preprocessor, constants, shortmaker
+from helper import preprocessor, constants, shortmaker
 from nltk import data
 
 
