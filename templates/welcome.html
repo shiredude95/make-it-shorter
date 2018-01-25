@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="google-site-verification" content="zK7RvY3kfL5p8I63G8Lx2bzQWeoEl5LVTV0O3KxRJDw" />
     <title>Welcome</title>
 </head>
 <body>
 
 <div id="image-head">
 
-    <img id="shorter" src="{{ url_for('static', filename='shorter.png') }}"/><b><i>version. </i>0.1.2</b>
+    <img id="shorter" src="{{ url_for('static', filename='shorter.png') }}"/><b><i>version. </i>0.2.3</b>
 
 </div>
 
@@ -50,8 +50,24 @@
 <p id="third_answer">
 
     Select the text you want (normally more than 2 lines) and right click to get the menu.Click
-    on Make It Shorter to view the summary.
+    on Make It Shorter to view the summary. The current Beta release also supports page wide summary,
+    where you do not need to select any pages, copy the url, click on the extension logo and paste it into
+    the text box. Press Go and enjoy your summary.
 
+</p>
+
+<p id="fifth_question">
+
+    Can I control the size of my summary?
+
+</p>
+
+<p id="fifth_answer">
+
+    You sure can! Click on the options menu from the extension and select either Normal or Small summary.
+    Normal summary reduces upto 40% of the text and small summaries reduce upto 60% of the text. You can also 
+    choose the option to lemmatize the text, this can possibly result in better summaries with the tradeoff being
+    slightly longer time to summarize. The default is Normal size summary and no lemmatization.
 </p>
 
 <div id="images">
