@@ -6,7 +6,7 @@ version. 0.2.4
 
 
 # What is Shorter.?
-horter. is a chrome extension that allows you to select text from any web-page and returns a shortened version of it.
+Shorter. is a chrome extension that allows you to select text from any web-page and returns a shortened version of it.
 
 # What do you mean shortened?
 
